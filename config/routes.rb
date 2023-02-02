@@ -8,4 +8,10 @@ Rails.application.routes.draw do
   # DSL = domain specific language
   # writing ruby within rails routing DSL
   # next, how do we respond to the request? (uninitialized constant error)
+  
+  get '/songs/:id', to: 'songs#show'
+  # i know this path (or request), send it to songs#show (the response)
+  # think of it as a placeholder and then we respond in the controller
+
+  get '/artists/:artist_id/songs', to: 'artist_songs#index'
 end
