@@ -1,7 +1,5 @@
 <% @artists.each do |artist| %>
-  <p><%= artist.name %> 
-  <%# <%= button_to "Edit #{artist.name}", url: "/artists/#{artist.id}/edit", method: :get  %>
-  </p>
+  <p><%= artist.name %> <%= button_to "Edit #{artist.name}", "/artists/#{artist.id}/edit", method: :get %></p>
 <% end %>
 
 <%= link_to "New Artist", "/artists/new" %>
