@@ -14,4 +14,9 @@ Rails.application.routes.draw do
   # think of it as a placeholder and then we respond in the controller
 
   get '/artists/:artist_id/songs', to: 'artist_songs#index'
+
+  get '/artists', to: 'artists#index'
+  get '/artists/new', to: 'artists#new'
+
+  post '/artists', to: 'artists#create'
 end
